@@ -1,0 +1,25 @@
+{
+  "name": "practice-cli",
+  "version": "0.0.0",
+  "description": "A simple cli setup",
+  "main": "dist/index.js",
+  "bin": {
+    "practice": "dist/index.js"
+  },
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "start": "node dist/index.js"
+  },
+  "keywords": [],
+  "author": "Bastian",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^22.15.17",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "commander": "^13.1.0"
+  }
+}
