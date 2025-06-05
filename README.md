@@ -1,4 +1,4 @@
-A simple CLI setup to practice command-line development.
+A simple CLI setup for practice projects.
 
 ### Setup
 
@@ -8,13 +8,14 @@ A simple CLI setup to practice command-line development.
 pnpm install
 ```
 
-2. Build the project
+2. Build the project (creates `dist/`)
 
 ```bash
+# tsc
 pnpm build
 ```
 
-3. Link globally for development
+3. Link globally for usage
 
 ```bash
 pnpm link --global
@@ -27,8 +28,8 @@ Now you can run `practice` from anywhere.
 Available commands:
 
 ```bash
-# Show help
-practice --help
+# Display general usage
+practice
 
 # Greet someone
 practice greet John
@@ -36,15 +37,20 @@ practice greet John
 
 ### Development
 
-Watch mode (rebuilds on file changes):
+1. Start watch mode (rebuilds `dist/` on changes)
 
 ```bash
+# tsc --watch
 pnpm dev
 ```
 
-Run locally without global link:
+2. Run project
 
 ```bash
+# With global link
+practice
+
+# Without global link
 pnpm start
 ```
 
@@ -55,9 +61,3 @@ When you're done developing, remove the global link:
 ```bash
 pnpm uninstall --global practice-cli
 ```
-
-### Project Structure
-
-- `src/index.ts` - Main CLI entry point with shebang
-- `dist/` - Compiled JavaScript output (gitignored)
-- `package.json` - Defines the `practice` binary command
